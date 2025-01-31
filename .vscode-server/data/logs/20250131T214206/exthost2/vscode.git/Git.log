@@ -1,0 +1,132 @@
+2025-01-31 21:44:49.646 [info] [main] Log level: Info
+2025-01-31 21:44:49.646 [info] [main] Validating found git in: "git"
+2025-01-31 21:44:49.646 [info] [main] Using git "2.34.1" from "git"
+2025-01-31 21:44:49.646 [info] [Model][doInitialScan] Initial repository scan started
+2025-01-31 21:44:49.646 [info] > git rev-parse --show-toplevel [31ms]
+2025-01-31 21:44:49.646 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-01-31 21:44:49.646 [info] > git rev-parse --show-toplevel [1ms]
+2025-01-31 21:44:49.646 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-01-31 21:44:49.646 [info] > git rev-parse --show-toplevel [1ms]
+2025-01-31 21:44:49.646 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-01-31 21:44:49.646 [info] > git rev-parse --show-toplevel [1ms]
+2025-01-31 21:44:49.646 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-01-31 21:44:49.646 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-01-31 21:47:17.764 [info] > git rev-parse --show-toplevel [2ms]
+2025-01-31 21:47:17.764 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-01-31 21:48:05.876 [info] > git rev-parse --show-toplevel [1ms]
+2025-01-31 21:48:05.876 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-01-31 21:50:55.638 [info] > git init -b main [41ms]
+2025-01-31 21:50:55.642 [info] > git rev-parse --show-toplevel [1ms]
+2025-01-31 21:50:55.647 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2025-01-31 21:50:55.657 [info] [Model][openRepository] Opened repository: /home/student
+2025-01-31 21:50:55.669 [info] [Git][getRemotes] No remotes found in the git config file
+2025-01-31 21:50:55.670 [info] > git config --get commit.template [5ms]
+2025-01-31 21:50:55.675 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [7ms]
+2025-01-31 21:50:55.676 [warning] [Git][getBranch] No such branch: main
+2025-01-31 21:50:55.684 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2025-01-31 21:50:55.695 [info] > git status -z -uall [16ms]
+2025-01-31 21:50:56.132 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [354ms]
+2025-01-31 21:50:56.132 [warning] [Git][getBranch] No such branch: main
+2025-01-31 21:50:56.132 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2025-01-31 21:50:56.158 [info] > git config --get commit.template [52ms]
+2025-01-31 21:50:56.171 [info] [Git][getRemotes] No remotes found in the git config file
+2025-01-31 21:50:56.177 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2025-01-31 21:50:56.177 [warning] [Git][getBranch] No such branch: main
+2025-01-31 21:50:56.195 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [3ms]
+2025-01-31 21:50:56.205 [info] > git status -z -uall [17ms]
+2025-01-31 21:50:56.655 [info] > git show --textconv :.bash_logout [8ms]
+2025-01-31 21:50:56.656 [info] > git ls-files --stage -- /home/student/.bash_logout [5ms]
+2025-01-31 21:50:56.657 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [14ms]
+2025-01-31 21:50:56.657 [info] fatal: bad revision 'refs/heads/main'
+2025-01-31 21:50:56.657 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "log",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2025-01-31 21:50:57.144 [info] > git check-ignore -v -z --stdin [1ms]
+2025-01-31 21:50:57.353 [info] > git ls-files --stage -- /home/student/.bash_logout [1ms]
+2025-01-31 21:50:57.500 [info] > git show --textconv :.bash_logout [1ms]
+2025-01-31 21:51:01.414 [info] > git add -A -- . [5752ms]
+2025-01-31 21:51:01.490 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - --allow-empty-message [73ms]
+2025-01-31 21:51:01.490 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2025-01-31 21:51:01.494 [info] > git config --get-all user.name [1ms]
+2025-01-31 21:51:01.499 [info] [Git][getRemotes] No remotes found in the git config file
+2025-01-31 21:51:01.500 [info] > git config --get commit.template [3ms]
+2025-01-31 21:51:01.500 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-01-31 21:51:01.500 [warning] [Git][getBranch] No such branch: main
+2025-01-31 21:51:01.506 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2025-01-31 21:51:01.515 [info] > git status -z -uall [13ms]
+2025-01-31 21:51:02.410 [info] > git show --textconv HEAD:.bash_logout [3ms]
+2025-01-31 21:51:02.411 [info] > git ls-tree -l HEAD -- /home/student/.bash_logout [2ms]
+2025-01-31 21:51:02.411 [info] fatal: Not a valid object name HEAD
+2025-01-31 21:51:02.801 [info] [Git][getRemotes] No remotes found in the git config file
+2025-01-31 21:51:02.804 [info] > git config --get commit.template [4ms]
+2025-01-31 21:51:02.805 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2025-01-31 21:51:02.805 [warning] [Git][getBranch] No such branch: main
+2025-01-31 21:51:02.811 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2025-01-31 21:51:02.822 [info] > git status -z -uall [15ms]
+2025-01-31 21:51:03.173 [info] > git ls-tree -l HEAD -- /home/student/.bash_logout [3ms]
+2025-01-31 21:51:03.173 [info] fatal: Not a valid object name HEAD
+2025-01-31 21:51:03.173 [info] > git ls-files --stage -- /home/student/.bash_logout [6ms]
+2025-01-31 21:51:03.177 [info] > git cat-file -s de4f5f75d7ccd3a5b62bd2ce683ed678a5cb72c2 [1ms]
+2025-01-31 21:51:03.318 [info] > git show --textconv HEAD:.bash_logout [4ms]
+2025-01-31 21:51:03.320 [info] > git show --textconv :.bash_logout [3ms]
+2025-01-31 21:54:59.249 [info] > git -c user.useConfigOnly=true commit --quiet [7ms]
+2025-01-31 21:54:59.249 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2025-01-31 21:54:59.252 [info] > git config --get-all user.name [1ms]
+2025-01-31 21:54:59.257 [info] [Git][getRemotes] No remotes found in the git config file
+2025-01-31 21:54:59.257 [info] > git config --get commit.template [2ms]
+2025-01-31 21:54:59.258 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-01-31 21:54:59.258 [warning] [Git][getBranch] No such branch: main
+2025-01-31 21:54:59.264 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2025-01-31 21:54:59.274 [info] > git status -z -uall [14ms]
+2025-01-31 21:55:00.573 [info] [Git][getRemotes] No remotes found in the git config file
+2025-01-31 21:55:00.573 [info] > git config --get commit.template [3ms]
+2025-01-31 21:55:00.574 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-01-31 21:55:00.574 [warning] [Git][getBranch] No such branch: main
+2025-01-31 21:55:00.579 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2025-01-31 21:55:00.589 [info] > git status -z -uall [13ms]
+2025-01-31 21:55:00.876 [info] > git ls-files --stage -- /home/student/.bash_logout [4ms]
+2025-01-31 21:55:00.878 [info] > git ls-tree -l HEAD -- /home/student/.bash_logout [3ms]
+2025-01-31 21:55:00.878 [info] fatal: Not a valid object name HEAD
+2025-01-31 21:55:00.879 [info] > git cat-file -s de4f5f75d7ccd3a5b62bd2ce683ed678a5cb72c2 [1ms]
+2025-01-31 21:55:01.021 [info] > git show --textconv HEAD:.bash_logout [3ms]
+2025-01-31 21:55:01.022 [info] > git show --textconv :.bash_logout [2ms]
+2025-01-31 21:56:43.827 [info] > git check-ignore -v -z --stdin [2ms]
+2025-01-31 21:56:47.371 [info] > git show --textconv :.bash_logout [8ms]
+2025-01-31 21:56:47.372 [info] > git show --textconv HEAD:.bash_logout [7ms]
+2025-01-31 21:56:47.372 [info] > git ls-tree -l HEAD -- /home/student/.bash_logout [2ms]
+2025-01-31 21:56:47.372 [info] fatal: Not a valid object name HEAD
+2025-01-31 21:56:47.373 [info] > git ls-files --stage -- /home/student/.bash_logout [5ms]
+2025-01-31 21:56:47.377 [info] > git cat-file -s de4f5f75d7ccd3a5b62bd2ce683ed678a5cb72c2 [2ms]
+2025-01-31 21:56:52.314 [info] > git show --textconv :.profile [7ms]
+2025-01-31 21:56:52.314 [info] > git show --textconv HEAD:.profile [5ms]
+2025-01-31 21:56:52.315 [info] > git ls-files --stage -- /home/student/.profile [4ms]
+2025-01-31 21:56:52.317 [info] > git ls-tree -l HEAD -- /home/student/.profile [4ms]
+2025-01-31 21:56:52.317 [info] fatal: Not a valid object name HEAD
+2025-01-31 21:56:52.318 [info] > git cat-file -s d89ea5a6e83a2956d7461b547fa0d7d68103b9c9 [2ms]
